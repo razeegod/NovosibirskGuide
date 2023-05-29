@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/navigation_category"
+        android:icon="@drawable/category"
+        android:title="@string/navigationMenu_category"
+        />
+
+    <item
+        android:id="@+id/navigation_map"
+        android:icon="@drawable/marker"
+        android:title="@string/navigationMenu_map"
+        />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/profile"
+        android:title="@string/navigationMenu_profile"
+        />
+
+
+</menu>

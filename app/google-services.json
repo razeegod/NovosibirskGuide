@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "643243467529",
+    "firebase_url": "https://novosibirskguide-745c0-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "novosibirskguide-745c0",
+    "storage_bucket": "novosibirskguide-745c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643243467529:android:3aea8c70ce1cb7ba88a9d8",
+        "android_client_info": {
+          "package_name": "com.example.kursovaya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "643243467529-l42b4glfb8rmk86dvk0p869u80e7ecec.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kursovaya",
+            "certificate_hash": "8b9a02d755a11b63423ed00a12bc9c76624eeedb"
+          }
+        },
+        {
+          "client_id": "643243467529-c5ctsris48tqbt4f6j75q6enl32260ar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACwYtPq1vbq_7S1lVpTzcP7Lt6GvpzbCQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "643243467529-c5ctsris48tqbt4f6j75q6enl32260ar.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

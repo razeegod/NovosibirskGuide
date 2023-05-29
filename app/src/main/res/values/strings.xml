@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Город N</string>
+    <string name="title_activity_places_map">PlacesMap</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigationMenu_map">Карта</string>
+    <string name="navigationMenu_profile">Профиль</string>
+    <string name="navigationMenu_category">Места</string>
+</resources>

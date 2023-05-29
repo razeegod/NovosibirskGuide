@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".Initialize.InitializeMap"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logotip2"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logotip"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Kursovaya"
+        tools:targetApi="31">
+        <activity
+            android:name=".Admins.AdminPlaceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admins.AdminChangePlacesChooseCategory"
+            android:exported="false" />
+        <activity
+            android:name=".Users.FavouriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Places.PlaceDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admins.AdminSettings"
+            android:exported="false" />
+        <activity
+            android:name=".Users.Settings"
+            android:exported="false" />
+        <activity
+            android:name=".Map.PlacesMap"
+            android:exported="false" />
+        <activity
+            android:name=".Places.PlaceActivity"
+            android:exported="false" />
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAbt3sFzMFB1fQlgt3MnCeXgTBESkTMVBk" />
+        <meta-data
+            android:name="com.yandex.mapkit.ApiKey"
+            android:value="0e9e3ed7-51bb-4622-bed2-86bc88582833" />
+
+        <activity
+            android:name=".Admins.AddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FogetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Admins.AdminPanel"
+            android:exported="false" />
+        <activity
+            android:name=".Users.CategoryPlace"
+            android:exported="false" />
+        <activity
+            android:name=".Admins.AddNewPlace"
+            android:exported="false" />
+        <activity
+            android:name=".Users.Profile"
+            android:exported="false" />
+        <activity
+            android:name=".Registration"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
