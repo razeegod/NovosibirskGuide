@@ -61,6 +61,11 @@ public class PlacesMap extends AppCompatActivity {
         navigationMenu = findViewById(R.id.navigation_panel);
         mapView = findViewById(R.id.map_guide);
 
+        if(getIntent().getExtras() != null) {
+            int menuItemId = getIntent().getExtras().getInt("MenuItemId");
+            navigationMenu.setSelectedItemId(menuItemId);
+        }
+
         double latitude = getIntent().getDoubleExtra("latitude", 0.0);
         double longitude = getIntent().getDoubleExtra("longitude", 0.0);
 
@@ -87,11 +92,15 @@ public class PlacesMap extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int itemId = item.getItemId();
                 if (itemId == R.id.navigation_profile) {
-                    startActivity(new Intent(PlacesMap.this, Profile.class));
+                    Intent intent = new Intent(PlacesMap.this, Profile.class);
+                    intent.putExtra("MenuItemId", itemId);
+                    startActivity(intent);
                 } else if (itemId == R.id.navigation_map) {
 
                 } else if (itemId == R.id.navigation_category) {
-                    startActivity(new Intent(PlacesMap.this, CategoryPlace.class));
+                    Intent intent = new Intent(PlacesMap.this, CategoryPlace.class);
+                    intent.putExtra("MenuItemId", itemId);
+                    startActivity(intent);
                 }
                 return true;
             }
@@ -105,7 +114,7 @@ public class PlacesMap extends AppCompatActivity {
         addMarkersFromFirebase("Places/Restaraunt");
         addMarkersFromFirebase("Places/Park");
         addMarkersFromFirebase("Places/Event");
-        addMarkersFromFirebase("Places/Master-class");
+        addMarkersFromFirebase("Places/Master-Class");
         addMarkersFromFirebase("Places/Shopping");
         addMarkersFromFirebase("Places/Nature");
         addMarkersFromFirebase("Places/History");

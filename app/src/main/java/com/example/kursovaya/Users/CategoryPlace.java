@@ -34,6 +34,12 @@ public class CategoryPlace extends AppCompatActivity {
 
         init();
 
+        if(getIntent().getExtras() != null) {
+            int menuItemId = getIntent().getExtras().getInt("MenuItemId");
+            NavigationMenu.setSelectedItemId(menuItemId);
+        }
+
+
         MuseumTheatreCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -121,11 +127,15 @@ public class CategoryPlace extends AppCompatActivity {
                 int ItemId = item.getItemId();
                 if (ItemId == R.id.navigation_profile)
                 {
-                    startActivity(new Intent(CategoryPlace.this, Profile.class));
+                    Intent intent = new Intent(CategoryPlace.this, Profile.class);
+                    intent.putExtra("MenuItemId", ItemId);
+                    startActivity(intent);
                 }
                 else if (ItemId == R.id.navigation_map)
                 {
-                    startActivity(new Intent(CategoryPlace.this, PlacesMap.class));
+                    Intent intent = new Intent(CategoryPlace.this, PlacesMap.class);
+                    intent.putExtra("MenuItemId", ItemId);
+                    startActivity(intent);
                 }
                 else if (ItemId == R.id.navigation_category)
                 {

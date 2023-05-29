@@ -45,7 +45,15 @@ public class Profile extends AppCompatActivity {
 
        init();
 
-       getRandomCityFact();
+       NavigationMenu.setSelectedItemId(R.id.navigation_profile);
+
+        if(getIntent().getExtras() != null) {
+            int menuItemId = getIntent().getExtras().getInt("MenuItemId");
+            NavigationMenu.setSelectedItemId(menuItemId);
+        }
+
+
+        getRandomCityFact();
        getRandomQuote();
 
         DatabaseReference UsersRef = FirebaseDatabase.getInstance().getReference().child("User").child(currentUserId);
@@ -97,11 +105,15 @@ public class Profile extends AppCompatActivity {
                 }
                 else if (ItemId == R.id.navigation_map)
                 {
-                    startActivity(new Intent(Profile.this, PlacesMap.class));
+                    Intent intent = new Intent (Profile.this, PlacesMap.class);
+                    intent.putExtra("MenuItemId", ItemId);
+                    startActivity(intent);
                 }
                 else if (ItemId == R.id.navigation_category)
                 {
-                    startActivity(new Intent(Profile.this, CategoryPlace.class));
+                    Intent intent = new  Intent(Profile.this, CategoryPlace.class);
+                    intent.putExtra("MenuItemId", ItemId);
+                    startActivity(intent);
                 }
                 return true;
             }
